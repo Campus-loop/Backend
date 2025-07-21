@@ -3,6 +3,7 @@ package loopcampus.com.backend.entity.member;
 
 import jakarta.persistence.*;
 import lombok.*;
+import loopcampus.com.backend.entity.audit.Period;
 import loopcampus.com.backend.entity.item.UsedItem;
 
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Builder
-public class Member {
+public class Member extends Period {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,6 +34,13 @@ public class Member {
 
     private String temperature;
 
+//    if user deleted account
+    private boolean isDeleted = false;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    private MemberProfile memberProfile;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private PasswordToken passwordToken;
 
 }
