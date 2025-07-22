@@ -4,6 +4,7 @@ package loopcampus.com.backend.entity.member;
 import jakarta.persistence.*;
 import lombok.*;
 import loopcampus.com.backend.entity.audit.Period;
+import loopcampus.com.backend.entity.item.ItemLike;
 import loopcampus.com.backend.entity.item.UsedItem;
 
 import java.util.List;
@@ -42,5 +43,11 @@ public class Member extends Period {
 
     @OneToOne(cascade = CascadeType.ALL)
     private PasswordToken passwordToken;
+
+    @OneToMany(fetch = FetchType.LAZY)
+    private List<UsedItem> usedItems;
+
+    @OneToMany(fetch = FetchType.LAZY)
+    private List<ItemLike> itemLikes;
 
 }

@@ -13,5 +13,4 @@ public abstract class Period {
     private LocalDate updatedAt;
     private LocalDate deletedAt;
     private boolean isDeleted;
-
 }
