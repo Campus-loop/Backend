@@ -20,4 +20,7 @@ public class MemberProfile extends Period {
     @Enumerated(EnumType.STRING)
     private FileType fileType;
 
+    @OneToOne(fetch = FetchType.LAZY)
+    private Member member;
+
 }

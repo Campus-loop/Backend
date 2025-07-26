@@ -50,4 +50,8 @@ public class Member extends Period {
     @OneToMany(fetch = FetchType.LAZY)
     private List<ItemLike> itemLikes;
 
+    @OneToOne(mappedBy = "member")
+    private MemberProfile profileImage;
+
+
 }
