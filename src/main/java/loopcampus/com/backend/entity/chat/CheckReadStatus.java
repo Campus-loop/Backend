@@ -9,4 +9,9 @@ public class CheckReadStatus extends Period {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
+
+    @ManyToOne
+    private ChatMessage message;
+
+
 }
