@@ -3,6 +3,7 @@ package loopcampus.com.backend.entity.member;
 
 import jakarta.persistence.*;
 import lombok.*;
+import loopcampus.com.backend.domain.MemberRole;
 import loopcampus.com.backend.entity.audit.Period;
 import loopcampus.com.backend.entity.item.ItemLike;
 import loopcampus.com.backend.entity.item.UsedItem;
@@ -32,6 +33,9 @@ public class Member extends Period {
     private String city;
     private String zipcode;
     private String addressLine;
+
+    private MemberRole role;
+
 
     private String temperature;
 

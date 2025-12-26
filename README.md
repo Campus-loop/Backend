@@ -6,3 +6,18 @@ domain : loop-campus.com
 Java version : 17
 Spring boot version : 3.5.3
 Project start date : 7/15 ~
+
+
+## Tech
+- Java
+- Spring Boot
+- PostgreSQL
+
+
+## This week (12/25 ~ 12/28)
+- Making Entity
+- connecting DB
+
+
+## Next week (12/29 ~ 1/4)
+- 
