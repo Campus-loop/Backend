@@ -20,3 +20,12 @@ Project start date : 7/15 ~
 
 ### API response
 -> 
+
+
+### Login 
+Login -> Server -> Validate -> issue AccessToken + issue refreshToken
+
+  After login -> validate token in JwtAuthFilter 
+
+
+
