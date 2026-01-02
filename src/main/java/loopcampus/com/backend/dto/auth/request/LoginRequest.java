@@ -1,4 +1,4 @@
-package loopcampus.com.backend.dto.request.auth;
+package loopcampus.com.backend.dto.auth.request;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
