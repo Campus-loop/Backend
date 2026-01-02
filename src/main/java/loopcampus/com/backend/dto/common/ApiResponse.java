@@ -1,6 +1,5 @@
-package loopcampus.com.backend.dto.response;
+package loopcampus.com.backend.dto.common;
 
-import java.time.Instant;
 
 public record ApiResponse<T>(
         T data,
@@ -11,11 +10,7 @@ public record ApiResponse<T>(
         return new ApiResponse<>(data, null, meta);
     }
 
-    public static <T> ApiResponse<T> error(ApiError error, ApiMeta meta) {
+    public static <T> ApiResponse<T> fail(ApiError error, ApiMeta meta) {
         return new ApiResponse<>(null, error, meta);
-    }
-
-    public static ApiMeta meta(String requestId, String path) {
-        return new ApiMeta(requestId, Instant.now(), path);
     }
 }

@@ -4,7 +4,7 @@ package loopcampus.com.backend.error;
 
 import org.springframework.http.HttpStatus;
 
-
+// This enum defines a standardized set of API error codes with HTTP status, internal code, and user-facing message
 public enum ErrorCode {
 
     // 400
@@ -16,14 +16,18 @@ public enum ErrorCode {
     // 401
     AUTH_INVALID_CREDENTIALS(HttpStatus.UNAUTHORIZED, "AUTH_INVALID_CREDENTIALS", "Email or password is incorrect."),
     AUTH_UNAUTHORIZED(HttpStatus.UNAUTHORIZED, "AUTH_UNAUTHORIZED", "Unauthorized."),
-    AUTH_TOKEN_INVALID(HttpStatus.UNAUTHORIZED, "AUTH_TOKEN_INVALID", "Invalid token."),
+//    Need to change before product
+    AUTH_TOKEN_INVALID(HttpStatus.UNAUTHORIZED, "AUTH_TOKEN_INVALID", "Invalid  AUTH_token."),
     AUTH_TOKEN_EXPIRED(HttpStatus.UNAUTHORIZED, "AUTH_TOKEN_EXPIRED", "Session expired. Please log in again."),
+    AUTH_REFRESH_EXPIRED(HttpStatus.UNAUTHORIZED, "AUTH_REFRESH_EXPIRED", "Session expired. Please log in again."),
+    AUTH_REFRESH_INVALID(HttpStatus.UNAUTHORIZED, "AUTH_REFRESH_INVALID", "Invalid REFRESH_TOKEN."),
 
     // 403
     AUTH_FORBIDDEN(HttpStatus.FORBIDDEN, "AUTH_FORBIDDEN", "Forbidden."),
 
     // 500
     INTERNAL_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, "INTERNAL_ERROR", "Unexpected error.");
+
 
     private final Meta meta;
 

@@ -14,7 +14,7 @@ import java.util.List;
 @Table(name = "member")
 @Getter
 @Setter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class Member extends Period {
@@ -42,6 +42,8 @@ public class Member extends Period {
 //    if user deleted account
     private boolean isDeleted = false;
 
+    private boolean isEmailVerified = false;
+
     @OneToOne(cascade = CascadeType.ALL)
     private MemberProfile memberProfile;
 
@@ -56,6 +58,7 @@ public class Member extends Period {
 
     @OneToOne(mappedBy = "member")
     private MemberProfile profileImage;
+
 
 
 }

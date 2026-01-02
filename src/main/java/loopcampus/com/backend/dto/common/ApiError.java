@@ -1,4 +1,4 @@
-package loopcampus.com.backend.dto.response;
+package loopcampus.com.backend.dto.common;
 
 import java.util.List;
 

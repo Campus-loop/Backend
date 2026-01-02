@@ -1,4 +1,4 @@
-package loopcampus.com.backend.dto.response;
+package loopcampus.com.backend.dto.common;
 
 public record ApiFieldError(
         String field,
