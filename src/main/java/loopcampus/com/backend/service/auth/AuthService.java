@@ -1,6 +1,6 @@
 package loopcampus.com.backend.service.auth;
 
-import loopcampus.com.backend.domain.MemberRole;
+import loopcampus.com.backend.enumTypes.MemberRole;
 import loopcampus.com.backend.dto.auth.request.LoginRequest;
 import loopcampus.com.backend.dto.auth.request.RegisterRequest;
 import loopcampus.com.backend.dto.auth.response.LoginResponse;
@@ -11,7 +11,7 @@ import loopcampus.com.backend.dto.common.ApiFieldError;
 import loopcampus.com.backend.entity.member.Member;
 import loopcampus.com.backend.entity.member.RefreshSession;
 import loopcampus.com.backend.error.ApiException;
-import loopcampus.com.backend.error.ErrorCode;
+import loopcampus.com.backend.enumTypes.ErrorCode;
 import loopcampus.com.backend.repository.MemberRepository;
 import loopcampus.com.backend.repository.RefreshSessionRepository;
 import loopcampus.com.backend.security.JwtProvider;

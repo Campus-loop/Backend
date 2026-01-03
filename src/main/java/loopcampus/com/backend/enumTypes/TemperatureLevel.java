@@ -1,4 +1,4 @@
-package loopcampus.com.backend.domain;
+package loopcampus.com.backend.enumTypes;
 
 public enum TemperatureLevel {
     COLD,    // 0~30

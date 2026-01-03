@@ -1,10 +1,16 @@
-package loopcampus.com.backend.error;
+package loopcampus.com.backend.enumTypes;
 
 
 
 import org.springframework.http.HttpStatus;
 
-// This enum defines a standardized set of API error codes with HTTP status, internal code, and user-facing message
+/*
+* This enum defines a standardized set of API error codes with HTTP status, internal code, and user-facing message
+*   Error definition standard
+*   - status : HTTP status code
+*   - code : Internal code
+*   - message : message for client
+* */
 public enum ErrorCode {
 
     // 400

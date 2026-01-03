@@ -1,7 +1,7 @@
 package loopcampus.com.backend.entity.file;
 
 import jakarta.persistence.*;
-import loopcampus.com.backend.domain.FileType;
+import loopcampus.com.backend.enumTypes.FileType;
 import loopcampus.com.backend.entity.audit.Period;
 
 public abstract class File extends Period {

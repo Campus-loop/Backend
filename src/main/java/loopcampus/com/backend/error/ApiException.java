@@ -1,11 +1,16 @@
 package loopcampus.com.backend.error;
 
 
+import loopcampus.com.backend.enumTypes.ErrorCode;
 import loopcampus.com.backend.dto.common.ApiFieldError;
 
 import java.util.List;
 import java.util.Objects;
 
+
+/*
+*
+* */
 public class ApiException extends RuntimeException {
     private final ErrorCode errorCode;
     private final List<ApiFieldError> details;

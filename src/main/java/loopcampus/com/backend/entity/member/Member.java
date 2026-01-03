@@ -3,7 +3,7 @@ package loopcampus.com.backend.entity.member;
 
 import jakarta.persistence.*;
 import lombok.*;
-import loopcampus.com.backend.domain.MemberRole;
+import loopcampus.com.backend.enumTypes.MemberRole;
 import loopcampus.com.backend.entity.audit.Period;
 import loopcampus.com.backend.entity.item.ItemLike;
 import loopcampus.com.backend.entity.item.UsedItem;

@@ -5,7 +5,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import loopcampus.com.backend.dto.common.ApiError;
 import loopcampus.com.backend.dto.common.ApiResponse;
-import loopcampus.com.backend.error.ErrorCode;
+import loopcampus.com.backend.enumTypes.ErrorCode;
 import loopcampus.com.backend.util.MetaFactory;
 import org.springframework.http.MediaType;
 import org.springframework.security.access.AccessDeniedException;
