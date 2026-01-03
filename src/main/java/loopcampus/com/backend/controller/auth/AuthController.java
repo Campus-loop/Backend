@@ -11,7 +11,7 @@ import loopcampus.com.backend.dto.auth.response.RegisterResponse;
 import loopcampus.com.backend.dto.common.ApiResponse;
 import loopcampus.com.backend.dto.common.MessageResponse;
 import loopcampus.com.backend.error.ApiException;
-import loopcampus.com.backend.error.ErrorCode;
+import loopcampus.com.backend.enumTypes.ErrorCode;
 import loopcampus.com.backend.service.auth.AuthService;
 import loopcampus.com.backend.util.CookieUtil;
 import loopcampus.com.backend.util.MetaFactory;

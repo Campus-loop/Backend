@@ -2,7 +2,7 @@ package loopcampus.com.backend.entity.member;
 
 
 import jakarta.persistence.*;
-import loopcampus.com.backend.domain.FileType;
+import loopcampus.com.backend.enumTypes.FileType;
 import loopcampus.com.backend.entity.audit.Period;
 
 

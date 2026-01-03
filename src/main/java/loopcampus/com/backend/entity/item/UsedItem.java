@@ -2,9 +2,8 @@ package loopcampus.com.backend.entity.item;
 
 
 import jakarta.persistence.*;
-import loopcampus.com.backend.domain.Category;
+import loopcampus.com.backend.enumTypes.Category;
 import loopcampus.com.backend.entity.audit.Period;
-import loopcampus.com.backend.entity.file.File;
 
 import java.util.List;
 
