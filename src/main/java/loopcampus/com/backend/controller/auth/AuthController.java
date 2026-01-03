@@ -38,6 +38,7 @@ public class AuthController {
             @Valid @RequestBody RegisterRequest req,
             HttpServletRequest servletReq
     ) {
+        System.out.println(req.toString());
         var data = authService.register(req);
         var meta = MetaFactory.from(servletReq);
         return ResponseEntity.status(HttpStatus.CREATED).body(ApiResponse.success(data, meta));

@@ -52,7 +52,7 @@ public class AuthService {
     }
 
     public RegisterResponse register(RegisterRequest req) throws ApiException {
-        if (!req.password().equals(req.passwordConfirm())) {
+        if (!req.password().equals(req.passwordConf())) {
             throw new ApiException(
                     ErrorCode.VALIDATION_FAILED,
                     "Invalid request.",

@@ -16,7 +16,9 @@ import java.util.Date;
 
 @Component
 public class JwtProvider {
+//    JWT sign secret key
     private final SecretKey key;
+//    Token expiration time
     private final long accessExpSeconds;
 
     public JwtProvider(@Value("${app.jwt.secret}") String secret,
