@@ -59,6 +59,7 @@ public class Member extends Period {
     @OneToOne(mappedBy = "member")
     private MemberProfile profileImage;
 
-
+    @OneToMany(mappedBy="member", cascade = CascadeType.ALL)
+    private List<RefreshToken> sessions;
 
 }

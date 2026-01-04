@@ -11,7 +11,7 @@ import java.time.Instant;
 @Getter
 @Setter
 @Entity
-public class RefreshSession {
+public class RefreshToken {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
