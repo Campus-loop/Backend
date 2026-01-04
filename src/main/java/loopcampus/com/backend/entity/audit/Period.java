@@ -19,7 +19,4 @@ public abstract class Period {
 
 //    삭제는 수동으로 기록
     private LocalDate deletedAt;
-
-    @CreationTimestamp
-    private boolean isDeleted;
 }

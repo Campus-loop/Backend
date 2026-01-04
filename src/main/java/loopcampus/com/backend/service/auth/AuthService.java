@@ -9,7 +9,7 @@ import loopcampus.com.backend.dto.auth.response.RegisterResponse;
 import loopcampus.com.backend.dto.auth.response.MemberSummary;
 import loopcampus.com.backend.dto.common.ApiFieldError;
 import loopcampus.com.backend.entity.member.Member;
-import loopcampus.com.backend.entity.member.RefreshSession;
+import loopcampus.com.backend.entity.member.RefreshToken;
 import loopcampus.com.backend.error.ApiException;
 import loopcampus.com.backend.enumTypes.ErrorCode;
 import loopcampus.com.backend.repository.MemberRepository;
@@ -86,7 +86,7 @@ public class AuthService {
         String refreshRaw = refreshTokenManager.newToken();
         String refreshHash = refreshTokenManager.hash(refreshRaw);
 
-        RefreshSession session = new RefreshSession();
+        RefreshToken session = new RefreshToken();
         session.setMember(member);
         session.setRefreshTokenHash(refreshHash);
         session.setExpiresAt(Instant.now().plusSeconds(refreshExpSeconds));
@@ -99,7 +99,7 @@ public class AuthService {
     public RefreshResponse refresh(String refreshRaw) {
         String hash = refreshTokenManager.hash(refreshRaw);
 
-        RefreshSession session = sessionRepo.findByRefreshTokenHashAndRevokedAtIsNull(hash)
+        RefreshToken session = sessionRepo.findByRefreshTokenHashAndRevokedAtIsNull(hash)
                 .orElseThrow(() -> new ApiException(ErrorCode.AUTH_REFRESH_INVALID));
 
         if (session.isExpired()) {
