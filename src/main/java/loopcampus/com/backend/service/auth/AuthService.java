@@ -66,6 +66,7 @@ public class AuthService {
 
         Member member = new Member();
         member.setEmail(req.email());
+        member.setName(req.name());
         member.setPassword(passwordEncoder.encode(req.password()));
         member.setRole(MemberRole.Role_Member);
         memberRepository.save(member);
@@ -76,7 +77,7 @@ public class AuthService {
     public LoginResult login(LoginRequest req) {
         Member member = memberRepository.findByEmail(req.email())
                 .orElseThrow(() -> new ApiException(ErrorCode.AUTH_INVALID_CREDENTIALS));
-
+        System.out.println(member.toString());
         if (!passwordEncoder.matches(req.password(), member.getPassword())) {
             throw new ApiException(ErrorCode.AUTH_INVALID_CREDENTIALS);
         }
